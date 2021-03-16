@@ -1,0 +1,23 @@
+version: "3"
+services:
+  # MariaDB Service
+  th_project_mysql:
+    image: mariadb:latest
+    command: "--innodb_use_native_aio=0 --log_bin=ON"
+    container_name: invoice_mysql
+    ports:
+      - "192.168.99.100:3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=invoice2020
+    volumes:
+      - /var/lib/docker/volumes/invoice_mysql/_data:/var/lib/mysql
+  # PHP MyAdmin Service
+  th_project_pma:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: invoice_pma
+    ports:
+      - "192.168.99.100:8100:80"
+    environment:
+      - PMA_HOST=192.168.99.100
+      - PMA_PORT=3306
+      

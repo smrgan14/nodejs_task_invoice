@@ -1,0 +1,4 @@
+error: ER_EMPTY_QUERY: Query was empty
+error: ER_EMPTY_QUERY: Query was empty
+[2020-12-09T13:29:10.552Z] error ER_EMPTY_QUERY: Query was empty
+[2020-12-09T13:34:33.224Z] error Insert article method ER_EMPTY_QUERY: Query was empty
